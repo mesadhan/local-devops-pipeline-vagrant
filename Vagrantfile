@@ -13,7 +13,14 @@ Vagrant.configure(2) do |config|
 	  node.vm.network "private_network", ip: "172.42.42.110"
 	  node.ssh.forward_agent = true
 	  
-	  node.vm.network "forwarded_port", guest: 8080, host: 7001   	# jenkins server
+	  # Jenkins & Sample-jenkin-app configurattion
+	  node.vm.network "forwarded_port", guest: 8080, host: 7001   	# access jenkins server
+	  node.vm.network "forwarded_port", guest: 8090, host: 18090   	# access sample-jenkins-app
+
+	  # Sonarqube Server configurattion
+	  node.vm.network "forwarded_port", guest: 9000, host: 9000   	# sonarqube ports
+	  node.vm.network "forwarded_port", guest: 9092, host: 9092   	# sonarqube ports
+	  
 	  node.vm.synced_folder "data-vagrant", "/home/data-vagrant"
 	  
 	  node.vm.provider "virtualbox" do |v|
