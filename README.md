@@ -14,7 +14,6 @@ using `docker start <containerId>`
 - http://localhost:7001
 
 
-
 ## 3. Jenkins CI/CD Server Post Configuration
 Before post configuration read `data-vagrant/sample-jenkins-app/Jenkinsfile` properly.
 
@@ -28,7 +27,7 @@ Before post configuration read `data-vagrant/sample-jenkins-app/Jenkinsfile` pro
 
 Note: If you want to change `myMaven` and `myDocker` then makes sure `Jenkinsfile` also has the same label.
 
-4. Create new job using `Multibrach Pipeline`, following
+## 4. Create new job using `Multibrach Pipeline`, following
 
     1.From `General` -> `Branch Sources`
 
@@ -43,7 +42,10 @@ Note: If you want to change `myMaven` and `myDocker` then makes sure `Jenkinsfil
 
 Apply, Save Then
 
-5. Build Now
+## 5. Build Now
+
+- http://localhost:7001 from home page select that pipeline and click `Build Now`
+
 
 
 ## After Build Success, `sample-jenkins-app` pull and run from DockerHub
