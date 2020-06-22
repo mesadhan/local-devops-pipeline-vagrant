@@ -27,6 +27,10 @@ Before post configuration read `data-vagrant/sample-jenkins-app/Jenkinsfile` pro
 
 Note: If you want to change `myMaven` and `myDocker` then makes sure `Jenkinsfile` also has the same label.
 
+4. Now setup Docker Hub credential Go -> `Global credentials' -> `Manage Jenkins` ID=`dockerHubAccount`, and put username, and password
+
+
+
 ## 4. Create new job using `Multibrach Pipeline`, following
 
     1.From `General` -> `Branch Sources`
